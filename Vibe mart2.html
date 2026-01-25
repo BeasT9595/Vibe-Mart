@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Vibe Mart - Trending Store</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+body {font-family: Arial; margin:0; background:#0b0b0b; color:white;}
+header {background:#111; padding:15px; text-align:center; font-size:22px; font-weight:bold;}
+.banner {background:linear-gradient(135deg,#1a1a2e,#16213e); padding:20px; text-align:center;}
+.banner h2 {color:#00ffff;}
+.product {background:#111; margin:10px; padding:15px; border-radius:12px;}
+.product img {width:100%; border-radius:10px;}
+.price {color:#00ff99; font-size:20px;}
+.old {text-decoration:line-through; color:gray;}
+button {background:#00ffff; color:black; padding:12px; width:100%; border:none; border-radius:8px; font-size:16px; font-weight:bold;}
+footer {background:#111; padding:10px; text-align:center; font-size:14px;}
+input, textarea {width:100%; padding:10px; margin:5px 0; border-radius:6px; border:none;}
+</style>
+</head>
+
+<body>
+
+<header>✨ VIBE MART ✨</header>
+
+<div class="banner">
+<h2>🔥 Trending Products Store</h2>
+<p>Cash On Delivery Available | Fast Delivery</p>
+</div>
+
+<!-- PRODUCT 1 -->
+<div class="product">
+<h3>🌌 Galaxy Projector Light</h3>
+<img src="https://i.imgur.com/5u6q3dZ.jpg">
+<p>Turn your room into a galaxy 🌠</p>
+<p class="price">₹1299 <span class="old">₹2999</span></p>
+<button onclick="orderProduct('Galaxy Projector Light')">BUY ON WHATSAPP</button>
+</div>
+
+<!-- PRODUCT 2 -->
+<div class="product">
+<h3>📱 Cute Phone Case</h3>
+<img src="https://i.imgur.com/JY5sH9C.jpg">
+<p>Trendy & Shockproof Phone Case</p>
+<p class="price">₹599 <span class="old">₹1299</span></p>
+<button onclick="orderProduct('Cute Phone Case')">BUY ON WHATSAPP</button>
+</div>
+
+<!-- PRODUCT 3 -->
+<div class="product">
+<h3>💆 Mini Neck Massager</h3>
+<img src="https://i.imgur.com/6pXxR6b.jpg">
+<p>Relax muscles instantly</p>
+<p class="price">₹1499 <span class="old">₹2999</span></p>
+<button onclick="orderProduct('Mini Neck Massager')">BUY ON WHATSAPP</button>
+</div>
+
+<!-- ORDER FORM -->
+<div class="product">
+<h3>📦 Place Your Order</h3>
+<input id="name" placeholder="Full Name">
+<input id="phone" placeholder="Phone Number">
+<textarea id="address" placeholder="Full Address"></textarea>
+</div>
+
+<script>
+function orderProduct(product) {
+let name = document.getElementById("name").value;
+let phone = document.getElementById("phone").value;
+let address = document.getElementById("address").value;
+
+let msg = "New Order from Vibe Mart:%0A" +
+"Name: " + name + "%0A" +
+"Phone: " + phone + "%0A" +
+"Address: " + address + "%0A" +
+"Product: " + product;
+
+window.open("https://wa.me/919876543210?text=" + msg);
+}
+</script>
+
+<footer>
+<p>© 2026 Vibe Mart | All Rights Reserved</p>
+</footer>
+
+</body>
+</html>
