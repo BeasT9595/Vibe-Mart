@@ -1,160 +1,292 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Vibe Mart - Online Store</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<style>
-body {
-  margin: 0;
-  font-family: Arial;
-  background: #f5f5f5;
-}
-
-header {
-  background: black;
-  color: white;
-  padding: 15px;
-  text-align: center;
-  font-size: 22px;
-  font-weight: bold;
-}
-
-.banner {
-  background: white;
-  padding: 8px;
-  text-align: center;
-  font-weight: bold;
-}
-
-.products {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 15px;
-  padding: 15px;
-}
-
-.card {
-  background: white;
-  padding: 10px;
-  border-radius: 12px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-  text-align: center;
-}
-
-.card img {
-  width: 100%;
-  border-radius: 10px;
-}
-
-.price {
-  font-size: 18px;
-  font-weight: bold;
-  color: green;
-}
-
-.old {
-  text-decoration: line-through;
-  color: red;
-  font-size: 14px;
-}
-
-button {
-  background: black;
-  color: white;
-  border: none;
-  padding: 10px;
-  width: 100%;
-  border-radius: 8px;
-  font-size: 16px;
-  margin-top: 5px;
-}
-
-footer {
-  background: white;
-  color: black;
-  padding: 10px;
-  text-align: center;
-  font-size: 14px;
-}
-
-input, textarea {width:100%; padding:10px; margin:5px 0; border-radius:6px; border:none;}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vibe Mart - Your Dropshipping Destination</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
+<style>
+  /* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #ff6b6b;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(to right, #ff6b6b, #4ecdc4);
+    color: #fff;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.hero h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #555;
+}
+
+/* Products Section */
+.products {
+    padding: 50px 0;
+    background-color: #fff;
+}
+
+.products h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.product {
+    background-color: #f9f9f9;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.product h3 {
+    margin: 15px 0;
+}
+
+.product p {
+    font-size: 1.2rem;
+    color: #ff6b6b;
+    margin-bottom: 15px;
+}
+
+/* About Section */
+.about {
+    padding: 50px 0;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+/* Contact Section */
+.contact {
+    padding: 50px 0;
+    background-color: #fff;
+    text-align: center;
+}
+
+.contact form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact input, .contact textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact textarea {
+    height: 100px;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+    }
+    
+    nav ul {
+        margin-top: 10px;
+    }
+    
+    .hero h2 {
+        font-size: 2rem;
+    }
+    
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
 <body>
+  <script>
+function sendWhatsApp() {
+let name = document.getElementById("name").value;
+let phone = document.getElementById("phone").value;
+let address = document.getElementById("address").value;
 
-<header>🛒 VIBE MART</header>
-<div class="banner">🔥 Free Delivery | COD Available | Sale Ending Today 🔥</div>
+let msg = `New Order from Vibe Mart:%0AName: ${name}%0APhone: ${phone}%0AAddress: ${address}%0AProduct: Galaxy Light%0APrice: ₹1299 COD`;
 
-<!-- ORDER FORM -->
+window.open("https://wa.me/9029031532?text=" + msg);
+}
+</script>
+    <header>
+        <div class="container">
+            <h1 class="logo">Vibe Mart</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <h2>Welcome to Vibe Mart</h2>
+            <p>Discover unique vibes for your lifestyle. Dropshipped straight to your door.</p>
+            <a href="#products" class="btn">Shop Now</a>
+        </div>
+    </section>
+
+    <section id="products" class="products">
+        <div class="container">
+            <h2>Featured Products</h2>
+            <div class="product-grid">
+                <div class="product">
+                    <img src="projector.jpg" alt="Galaxy Light Projector">
+                    <h3>Galaxy Light Projector</h3>
+                    <p>1299</p>
+                    <button class="btn" onclick="sendWhatsApp()">ORDER ON WHATSAPP</button>
+                </div>
+                <div class="product">
+                    <img src="airpods.jpg" alt="Airpods Pro Clone">
+                    <h3>Airpods Pro Clone</h3>
+                    <p>599</p>
+                    <button class="btn" onclick="sendWhatsApp()">ORDER ON WHATSAPP</button>
+                </div>
+                <div class="product">
+                    <img src="mini neck.jpg" alt="Neck Massager">
+                    <h3>Neck Massager</h3>
+                    <p>899</p>
+                    <button class="btn" onclick="sendWhatsApp()">ORDER ON WHATSAPP</button>
+                </div>
+                <div class="product">
+                    <img src="seal.jpg" alt="Mini Sealing Machine">
+                    <h3>  Mini Sealing Machine </h3>
+                    <p>699</p>
+                    <button class="btn" onclick="sendWhatsApp()">ORDER ON WHATSAPP</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Vibe Mart</h2>
+            <p>At Vibe Mart, we curate the best dropshipped products to bring good vibes into your life. From fashion to home essentials, everything is sourced ethically and delivered fast.</p>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>Email: parikshitmistry549@gmail.com | Phone: (+91)9029031532</p>
+            </div>
+            <!-- ORDER FORM -->
 <div class="product">
 <h3>📦 Place Your Order</h3>
 <input id="name" placeholder="Full Name">
 <input id="phone" placeholder="Phone Number">
 <textarea id="address" placeholder="Full Address"></textarea>
 </div>
+    </section>
 
-<script>
-function orderProduct(product) {
-let name = document.getElementById("name").value;
-let phone = document.getElementById("phone").value;
-let address = document.getElementById("address").value;
-
-let msg = "New Order from Vibe Mart:%0A" +
-"Name: " + name + "%0A" +
-"Phone: " + phone + "%0A" +
-"Address: " + address + "%0A" +
-"Product: " + product;
-
-window.open("https://wa.me/9029031532?text=" + msg);
-}
-</script>
-
-<div class="products">
-
-<!-- Galaxy Light -->
-<div class="card">
-<img src="projector.jpg">
-<h3>Galaxy Star Projector Light</h3>
-<p class="price">₹1299 <span class="old">₹2999</span></p>
-
-<button onclick="orderProduct('Galaxy Light')">BUY ON WHATSAPP</button>
-</a>
-</div>
-
-<!-- AirPods -->
-<div class="card">
-<img src="airpods.jpg">
-<h3>Wireless AirPods Pro Clone</h3>
-<p class="price">₹599 <span class="old">₹1299</span></p>
-<button onclick="orderProduct('Airpods')">BUY ON WHATSAPP</button>
-</a>
-</div>
-
-<!-- Neck Massager -->
-<div class="card">
-<img src="mini neck.jpg">
-<h3>Electric Neck Massager</h3>
-<p class="price">₹699 <span class="old">₹1499</span></p>
-<button onclick="orderProduct('Neck Massager')">BUY ON WHATSAPP</button>
-</a>
-</div>
-
-<!-- Sealing Machine -->
-<div class="card">
-<img src="seal.jpg">
-<h3>Mini Plastic Sealing Machine</h3>
-<p class="price">₹599 <span class="old">₹1399</span></p>
-<button onclick="orderProduct('Sealing Machine')">BUY ON WHATSAPP</button>
-</a>
-</div>
-
-</div>
-
-<footer>
-© 2026 Vibe Mart | Trusted Online Store
-</footer>
-
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Vibe Mart. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>
