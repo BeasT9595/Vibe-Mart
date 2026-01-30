@@ -198,16 +198,22 @@ footer {
 </style>
 <body>
   <script>
-function sendWhatsApp() {
+function orderProduct(product) {
 let name = document.getElementById("name").value;
 let phone = document.getElementById("phone").value;
 let address = document.getElementById("address").value;
 
-let msg = `New Order from Vibe Mart:%0AName: ${name}%0APhone: ${phone}%0AAddress: ${address}%0AProduct: Galaxy Light%0APrice: ₹1299 COD`;
+let msg = "New Order from Vibe Mart:%0A" +
+"Name: " + name + "%0A" +
+"Phone: " + phone + "%0A" +
+"Address: " + address + "%0A" +
+"Product: " + product;
 
 window.open("https://wa.me/9029031532?text=" + msg);
 }
 </script>
+
+
     <header>
         <div class="container">
             <h1 class="logo">Vibe Mart</h1>
@@ -237,26 +243,36 @@ window.open("https://wa.me/9029031532?text=" + msg);
                 <div class="product">
                     <img src="projector.jpg" alt="Galaxy Light Projector">
                     <h3>Galaxy Light Projector</h3>
-                    <p>1299</p>
-                    <button class="btn" onclick="sendWhatsApp()">ORDER ON WHATSAPP</button>
+                    <p>1299</p>                 <button class="btn" onclick="orderProduct('Galaxy Light Projector')">
+                      Buy
+                    </button>
                 </div>
                 <div class="product">
                     <img src="airpods.jpg" alt="Airpods Pro Clone">
                     <h3>Airpods Pro Clone</h3>
                     <p>599</p>
-                    <button class="btn" onclick="sendWhatsApp()">ORDER ON WHATSAPP</button>
+       <button class="btn" onclick="orderProduct('Airpods Pro Clone')">
+                    Buy
+                    </button>
+                
                 </div>
                 <div class="product">
                     <img src="mini neck.jpg" alt="Neck Massager">
                     <h3>Neck Massager</h3>
                     <p>899</p>
-                    <button class="btn" onclick="sendWhatsApp()">ORDER ON WHATSAPP</button>
+       <button class="btn" onclick="orderProduct('Neck Massager')">
+                      Buy
+                    </button>
+                
                 </div>
                 <div class="product">
                     <img src="seal.jpg" alt="Mini Sealing Machine">
                     <h3>  Mini Sealing Machine </h3>
                     <p>699</p>
-                    <button class="btn" onclick="sendWhatsApp()">ORDER ON WHATSAPP</button>
+      <button class="btn" onclick="orderProduct('Mini Sealing Machine')">
+                      Buy
+                  </button>
+                
                 </div>
             </div>
         </div>
