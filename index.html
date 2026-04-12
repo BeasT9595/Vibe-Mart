@@ -7,6 +7,17 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <style>
+    .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
     .product {
     transition: transform 0.3s ease;
 }
@@ -226,7 +237,10 @@ window.open("https://wa.me/9029031532?text=" + msg);
 
     <header>
         <div class="container">
-            <h1 class="logo">Vibe Mart</h1>
+            <h1 class="logo">
+  <img src="vibelogo.png" alt="Vibe Mart Logo" class="logo-img">
+  Vibe Mart
+</h1>
             <nav>
                 <ul>
                     <li><a href="#home">Home</a></li>
